@@ -6,3 +6,10 @@ class Contacto:
 
     def __str__(self):
         return f"Nombre: {self.nombre}, Teléfono: {self.telefono}, Correo: {self.correo}"
+    
+    def to_dict(self):
+        return {
+            "nombre": self.nombre,
+            "telefono": self.telefono,
+            "correo": self.correo
+        }
