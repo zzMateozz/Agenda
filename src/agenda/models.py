@@ -13,3 +13,19 @@ class Contacto:
             "telefono": self.telefono,
             "correo": self.correo
         }
+    
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            nombre=data.get("nombre"),
+            telefono=data.get("telefono"),
+            correo=data.get("correo")
+        )
+    
+    def actualizar(self, nombre=None, telefono=None, correo=None):
+        if nombre:
+            self.nombre = nombre
+        if telefono:
+            self.telefono = telefono
+        if correo:
+            self.correo = correo
